@@ -1,18 +1,11 @@
+//import {useState} from 'react';
 import React from 'react';
+import MyTour from './tour/Tour'
 const Tours = ({data}) =>{
+
     return(
-        <>
-        {
-            data.map(tour => {
-                return(
-                    <div> 
-                        <h3>{tour.name}</h3>
-                        <img src={tour.image} alt="" />                                                                      
-                    </div>
-                )
-                
-            })
-        }
+        <>       
+        <MyTour data = {data}/>
         </>                
     )
 };
