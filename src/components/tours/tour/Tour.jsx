@@ -1,24 +1,17 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-//import data from '../../../data/data.json'
-const Tour = ({data}) =>{           
+export default function Tours({city}){
     return(
-        <>
-        {            
-            data.map((tour,index) => {                
-                return(
-                    <Link to={`/tour?=${tour.name}`} key={index}> <div key={index}> 
-                        <h3>{tour.name}</h3>                        
-                        <img src={tour.image} alt="" />                                                                      
-                    </div>
-                    </Link>
-                )
-                
-            })
-        }
-        </>                
-    )
-};
+        <div>
+               <h2>{city.name}</h2>
+            <Link to={`city/${city.id}`}>
+        <img src={city.image} alt="" />
+            </Link>
 
-export default Tour;
+        </div>
+      
+    )
+}
+
+
