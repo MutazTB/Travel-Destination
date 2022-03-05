@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react"
+import MyNavbar from "../navbar/Navbar"
 
-function Header(){
+let Header =()=>{
     return(
-        <header>
-           <h1>
-               Travel Destination
-           </h1>
-        </header>
+        <>
+        <h1>Travel Destination</h1>
+        <MyNavbar/>
+        </>
     )
 };
 
-export  default Header;
+export default Header;

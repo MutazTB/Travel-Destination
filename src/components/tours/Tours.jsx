@@ -1,13 +1,19 @@
-//import {useState} from 'react';
-import React from 'react';
-import MyTour from './tour/Tour'
-const Tours = ({data}) =>{
+import React from 'react'
+import MyTours from './tour/Tour'
 
-    return(
-        <>       
-        <MyTour data = {data}/>
-        </>                
-    )
+let Tour =({data})=>{
+     return(
+    <>
+    {
+    data.map((city,index) =>{
+        
+        return(
+       <MyTours key={index} city={city} />
+        )       
+    })
+}
+    </>
+)
 };
 
-export default Tours;
+export default Tour;
